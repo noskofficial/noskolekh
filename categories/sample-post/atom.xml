@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>NOSKoLekh - Blog by NOSKians - Sample Post</title>
+    <subtitle>Noskolekh is a site of Nepal Open Source Klub (NOSK), which is used to write blog contents by the authors. Anyone can be author in this site, who proporly follow the Code of Conduct.</subtitle>
+    <link href="https://blog.nosk.org.np/categories/sample-post/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.nosk.org.np"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-04T00:00:00+00:00</updated>
+    <id>https://blog.nosk.org.np/categories/sample-post/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Hello World</title>
+        <published>2023-09-04T00:00:00+00:00</published>
+        <updated>2023-09-04T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.nosk.org.np/hello-world/" type="text/html"/>
+        <id>https://blog.nosk.org.np/hello-world/</id>
+        
+        <content type="html">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World !&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is Nepal Open Source Klub (NOSK).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>NOSKoLekh - Blog by NOSKians</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/feather.css">
+  <link rel="stylesheet" href="/syntax-theme-light.css" media="screen" />
+  <link rel="stylesheet" href="/syntax-theme-dark.css" media="screen and (prefers-color-scheme: dark)" />
+  <link rel="stylesheet" id="syntax" />
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+
+  <!-- js -->
+  <script src='/js/images.js'></script>
+  <script src='/js/main.js'></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  
+  <script></script>
+  
+
+  
+
+  
+  
+</head>
+
+<body>
+
+  <a href="/">
+    <div class='header-image'
+      style='background-image: url(/theme_images/banner.png);'>
+    </div>
+  </a>
+  <div class="container">
+    <br>
+    <button class="theme-switcher nav-texonomies">light/dark toggle</button>
+    
+      
+        
+          <a class="navbar-item has-text-weight-semibold nav-texonomies" href="https:&#x2F;&#x2F;blog.nosk.org.np&#x2F;">
+            HOME
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold nav-texonomies" href="https:&#x2F;&#x2F;blog.nosk.org.np&#x2F;authors">
+            AUTHORS
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold nav-texonomies" href="https:&#x2F;&#x2F;blog.nosk.org.np&#x2F;categories">
+            CATEGORIES
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold nav-texonomies" href="https:&#x2F;&#x2F;blog.nosk.org.np&#x2F;tags">
+            TAGS
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold nav-texonomies" href="https:&#x2F;&#x2F;nosk.org.np">
+            NOSK
+          </a>
+          
+      
+    
+  </div>
+
+  
+  <div class="container">
+    <section>
+      <h3 class="term-name"> CATEGORY: Sample Post </h3>
+    </section>
+    <div class="posts">
+      
+          <section>
+            <a class='header-link' href="&#x2F;hello-world&#x2F;">
+              <h3 class="title"> Hello World </h3>
+            </a>
+            <p> 
+              Hello World !
+
+This is Nepal Open Source Klub (NOSK).
+
+ 
+            </p>
+          </section>
+        <hr/>
+      
+    </div>
+  </div>
+
+
+  <footer>
+    Made with <span style="color: red;">&hearts;</span>  by <a href="https://nosk.org.np/">NOSK Members</a>
+  </footer>
+
+  <script>
+    function change_theme(theme) {
+      if (theme == "light") {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        document.querySelector('#syntax').href = '/syntax-theme-light.css';
+      } else if (theme == "dark") {
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+        document.querySelector('#syntax').href = '/syntax-theme-dark.css';
+      }
+      localStorage.setItem("theme", theme);
+    }
+
+    window.addEventListener('load', () => {
+      // Select the button
+      const theme = (function () {
+        const stored = localStorage.getItem("theme");
+        if (localStorage == null) {
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+          } else {
+            return "light";
+          }
+        } else {
+          return stored;
+        }
+      })();
+
+      change_theme(theme);
+
+      // Listen for a click on the button 
+      document.querySelector(".theme-switcher").addEventListener("click", function () {
+        if (!document.body.classList.contains("dark")) {
+          change_theme("dark");
+        } else {
+          change_theme("light");
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

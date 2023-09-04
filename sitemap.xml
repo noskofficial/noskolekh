@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.nosk.org.np/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/authors/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/authors/bishal-poudel/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/categories/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/categories/sample-post/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/hello-world/</loc>
+        <lastmod>2023-09-04</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/tags/first-post/</loc>
+    </url>
+    <url>
+        <loc>https://blog.nosk.org.np/tags/hello-world/</loc>
+    </url>
+</urlset>
