@@ -1,0 +1,75 @@
+# This is an example file to help you get started.
+# This also lets you run `zola serve` just in the themes directory
+# for easier development.
+
+# The URL the site will be built for
+base_url = "http://localhost:1111"
+
+# The site title and description; used in feeds by default.
+title = "NOSKoLekh - Blog by NOSKians"
+description = "Noskolekh is a site of Nepal Open Source Klub (NOSK), which is used to write blog contents by the authors. Anyone can be author in this site, who proporly follow the Code of Conduct."
+
+default_language = "en"
+
+taxonomies = [
+  { name = "tags", feed = true, render = true },
+  { name = "categories", feed = true, render = true },
+  { name = "authors", feed = true, render = true }
+]
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+build_search_index = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "ayu-light", filename = "syntax-theme-light.css" },
+]
+render_emoji = true
+smart_punctuation = true
+external_links_target_blank = true
+
+[extra]
+feather_disqus_code = "<div id='disqus_thread'>Thank You!</div>"
+feather_analytics = "<script></script>"
+generate_categories_pages = true
+generate_tags_pages = true
+
+# Set HTML file language
+language_code = "en-US"
+
+navbar_items = [
+    { code = "en", nav_items = [
+        { url = "$BASE_URL/", name = "HOME" },
+        { url = "$BASE_URL/authors", name = "AUTHORS" },
+        { url = "$BASE_URL/categories", name = "CATEGORIES" },
+        { url = "$BASE_URL/tags", name = "TAGS" },
+        { url = "https://nosk.org.np", name = "NOSK" },
+    ] },
+]
+
+[extra.favicon]
+favicon = "favicon.ico"
+
+[extra.author]
+name = "NOSK"
+#avatar = "images/avatar.png

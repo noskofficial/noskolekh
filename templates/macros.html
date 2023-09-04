@@ -1,0 +1,62 @@
+{% macro chapter(prev=false, next=false) %}
+<div class="chapter">
+    {% if prev %}
+    {% set page = get_page(path=prev) %}
+    <a href="{{page.permalink}}">← {{page.title}}</a>
+    {% else %}
+    {# always push `next` over #}
+    <div></div>
+    {% endif %}
+
+    {% if next %}
+    {% set page = get_page(path=next) %}
+    <a href="{{page.permalink}}">{{page.title}} →</a>
+    {% endif %}
+</div>
+{% endmacro chapter %}
+
+{% macro page_publish_metadata(page) %}
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="fas fa-user"></i>
+  </span>
+  <span>{{ config.extra.author.name }} published on</span>
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="{{ page.date }}">{{ page.date | date(format='%B %d, %Y') }}</time></span>
+</span>
+{% endmacro %}
+
+{% macro render_categories(categories) %}
+<p>
+  Categories:
+  {% for category in categories %}
+  <a class="has-text-info-dark has-text-weight-semibold" href="{{ get_taxonomy_url(kind='categories', name=category) }}">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-cube"></i>
+      </span>
+      <span>{{category}}</span>
+    </span>
+  </a>
+  {% endfor %}
+</p>
+{% endmacro %}
+
+
+{% macro render_tags(tags) %}
+<p>
+  Tags:
+  {% for tag in tags %}
+  <a class="has-text-info-dark has-text-weight-semibold" href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>{{tag}}</span>
+    </span>
+  </a>
+  {% endfor %}
+</p>
+{% endmacro %}
